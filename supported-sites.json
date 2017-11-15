@@ -1,0 +1,13 @@
+{
+    "update-date": "15/11/2017",
+    "version": "0.0.1",
+    "details": {
+        "http://blogtruyen.com": "div#list-chapters",
+        "http://mangak.info": "div.chapter-list",
+        "http://truyentranh8.net": "ul#ChapList",
+        "http://hocvientruyentranh.com": "table.table-hover > tbody",
+        "http://truyentranhtuan.com": "div#manga-chapter",
+        "https://hentaivn.net": "table.listing > tbody",
+        "http://mangafox.me": "ul.chlist"
+    }
+}
