@@ -29,6 +29,14 @@
         "http://mangafox.me": {
             "list": "ul.chlist a",
             "thumbnail": "div.cover > img"
+        },
+        "http://www.novelupdates.com": {
+            "list": "div#myTable > tbody > tr:first-child > td:last-child > a:last-child",
+            "thumbnail": "div.seriesimg > img"
+        },
+        "http://valvrareteam.com": {
+            "list": "",
+            "thumbnail": ""
         }
     }
 }
