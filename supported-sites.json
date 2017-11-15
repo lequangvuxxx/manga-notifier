@@ -3,31 +3,31 @@
     "version": "0.0.1",
     "details": {
         "http://blogtruyen.com": {
-            "list": "div#list-chapters > a",
+            "list": "div#list-chapters a",
             "thumbnail": "div#thumbnail > img"
         },
         "http://mangak.info": {
             "list": "div.chapter-list",
-            "thumbnail": "div.truyen_info_left > img:first-child"
+            "thumbnail": "div.truyen_info_left img:first-child"
         },
         "http://truyentranh8.net": {
             "list": "ul#ChapList > a",
             "thumbnail": "img.thumbnail"
         },
         "http://hocvientruyentranh.com": {
-            "list": "table.table-hover > tbody > a",
+            "list": "table.table-hover > tbody a",
             "thumbnail": "div.__info-container > div.__left > div.__image > img"
         },
         "http://truyentranhtuan.com": {
-            "list": "div#manga-chapter > a",
+            "list": "div#manga-chapter a",
             "thumbnail": "div.manga-cover > img"
         },
         "https://hentaivn.net": {
-            "list": "table.listing > tbody > a",
+            "list": "table.listing > tbody a",
             "thumbnail": "div.page-ava > img"
         },
         "http://mangafox.me": {
-            "list": "ul.chlist > a",
+            "list": "ul.chlist a",
             "thumbnail": "div.cover > img"
         }
     }

@@ -2,7 +2,9 @@
 function updateSupportedSites() {
     $.get('https://github.com/lequangvuxxx/manga-notifier/raw/master/supported-sites.json?raw=True')
         .done(dat => {
-            chrome.storage.local.set({'supported-sites': JSON.parse(dat)});
+            const data = JSON.parse(dat);
+            siteDetails = data;
+            chrome.storage.local.set({'supported-sites': data});
         })
 }
 chrome.runtime.onInstalled.addListener((dt) => {
@@ -98,11 +100,11 @@ function checkForUpdate({site, url}, callback) {
     .done(page => {
 
         const list = $(page).find(listSel);
-
+        console.log(list);
         if(list.length == 0) return;
 
         const lastedChap = site + list[0].href;
-
+        console.log(lastedChap);
         chrome.history.getVisited({url: lastedChap}, arr => {
             callback(arr.length == 0 ? false : list[0].title);
         });
