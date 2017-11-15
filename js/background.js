@@ -34,10 +34,9 @@ chrome.runtime.onMessage.addListener((request, sender, response) => {
         $.get(url)
             .done(page => {
                 const img = $(page).find(thumbnail);
-                console.log(img);
+
                 if(img.length == 0) return;
                 const imgSrc = $(img[0]).attr('src');
-                console.log(imgSrc);
                 createThumbnail(imgSrc, newBookmark(name, url, site))
             })
     }
@@ -59,8 +58,7 @@ function newBookmark(name, url, site) {
                 name,
                 site,
                 thumbnail
-            })
-            console.log(bookmarks);
+            })            
             chrome.storage.local.set({bookmarks});
         })
     }
@@ -86,7 +84,7 @@ function getNotification() {
 
                     if(newNotis == 0) newNotis = "";
                     chrome.browserAction.setBadgeBackgroundColor({color: "#115100"});
-                    chrome.browserAction.setBadgeText({text: newNotis});
+                    chrome.browserAction.setBadgeText({text: ""+newNotis});
                 })
             );
         }
@@ -110,7 +108,7 @@ function checkForUpdate({site, url}, callback) {
         chrome.history.getVisits({url: lastedChap}, arr => {
             callback(arr.length == 0 ? list[0].title : false);
         });
-    }, "text")
+    })
 }
 
 function addToNoti(bookmark, newInfo) {
