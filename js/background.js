@@ -3,7 +3,7 @@ function updateSupportedSites() {
     $.get('https://github.com/lequangvuxxx/manga-notifier/raw/master/supported-sites.json?raw=True')
         .done(dat => {
             const data = JSON.parse(dat);
-            siteDetails = data;
+            siteDetails = data.details;
             chrome.storage.local.set({'supported-sites': data});
         })
 }
@@ -34,8 +34,10 @@ chrome.runtime.onMessage.addListener((request, sender, response) => {
         $.get(url)
             .done(page => {
                 const img = $(page).find(thumbnail);
+                console.log(img);
                 if(img.length == 0) return;
-                const imgSrc = img.attr('src');
+                const imgSrc = $(img[0]).attr('src');
+                console.log(imgSrc);
                 createThumbnail(imgSrc, newBookmark(name, url, site))
             })
     }
@@ -58,6 +60,7 @@ function newBookmark(name, url, site) {
                 site,
                 thumbnail
             })
+            console.log(bookmarks);
             chrome.storage.local.set({bookmarks});
         })
     }
@@ -96,19 +99,18 @@ function checkForUpdate({site, url}, callback) {
 
     const listSel = siteDetails[site].list;
 
-    $.get(url)
-    .done(page => {
+    $.get(url, page => {
 
         const list = $(page).find(listSel);
-        console.log(list);
+
         if(list.length == 0) return;
 
-        const lastedChap = site + list[0].href;
-        console.log(lastedChap);
-        chrome.history.getVisited({url: lastedChap}, arr => {
-            callback(arr.length == 0 ? false : list[0].title);
+        const lastedChap = site + $(list[0]).attr("href");
+
+        chrome.history.getVisits({url: lastedChap}, arr => {
+            callback(arr.length == 0 ? list[0].title : false);
         });
-    })
+    }, "text")
 }
 
 function addToNoti(bookmark, newInfo) {

@@ -4,7 +4,7 @@
     "details": {
         "http://blogtruyen.com": {
             "list": "div#list-chapters a",
-            "thumbnail": "div#thumbnail > img"
+            "thumbnail": "div.thumbnail > img"
         },
         "http://mangak.info": {
             "list": "div.chapter-list",
