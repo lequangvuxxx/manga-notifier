@@ -1,32 +1,69 @@
 body {
-	width: 300px;
-	height: 100px;
+	width: 410px;
+	min-height: 100px;
 	float: left;
 	padding: 0px;
 	margin: 0px;
-	border: 0px;	
+	border: 0px;
+	font: 16px/1.5 Arial;
+}
+
+div.container {
+	width: 360px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+input {
+	width: 300px;
+	margin: 4px;
+	margin-top: 0px;
+	padding: 5px;
+}
+
+#options button {
+	float: right;
+	border: #000 2px;
+	padding: 10px;
+	margin: 5px;
+	margin-top: -3px;
+	cursor: pointer;
+}
+
+button.green {
+	background-color: lime;
+}
+
+p.warning {
+	color: red;
+	text-align: center;
+	font-weight: bold;
 }
 
 .nav ul {
 	list-style: none;
-	float: right;
 	top: 0px;
-	position: relative;
+	right: 0px;
+	position: absolute;
 	padding: 0px;
 	margin: 0px;
-	border: 0px;	
+	border: 0px;
 }
 .nav li {
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	font-size: 1.4rem;	
+	font-size: 1.4rem;
 	text-align: center;
 }
 .nav a {
 	text-decoration:  none;
 	background-color: #006600;
-	color: white;	
+	color: white;
 	display: block;
 	cursor: pointer;
+}
+.active a {
+	background-color: #16a216;
 }

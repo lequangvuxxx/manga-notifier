@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/popup.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/getNotify.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
 </head>
 <body>
+	<div class="container">
+		<p>
+			Tên:
+			<input type="text" id="name">
+		</p>
+		<div id="options">
+		</div>
+	</div>
+
 	<div class='nav'>
 		<ul>
-			<li><a href="#">&#9734;</a>
-
+			<li class='active'>
+				<a id="bookmark" href="#">&#9734;</a>
 			</li>
-			<li><a href="#">&#10084;</a>
-
+			<li>
+				<a id="notification" href="#">&#10084;</a>
 			</li>
 		</ul>
 	</div>
