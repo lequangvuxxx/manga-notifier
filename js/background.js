@@ -58,7 +58,7 @@ function newBookmark(name, url, site) {
                 name,
                 site,
                 thumbnail
-            })            
+            })
             chrome.storage.local.set({bookmarks});
         })
     }
@@ -95,7 +95,7 @@ getNotification();
 
 function checkForUpdate({site, url}, callback) {
 
-    const listSel = siteDetails[site].list;
+    const listSel = siteDetails[site]["lasted-chap"];
 
     $.get(url, page => {
 

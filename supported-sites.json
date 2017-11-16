@@ -3,39 +3,39 @@
     "version": "0.0.1",
     "details": {
         "http://blogtruyen.com": {
-            "list": "div#list-chapters a",
+            "lasted-chap": "div#list-chapters a",
             "thumbnail": "div.thumbnail > img"
         },
         "http://mangak.info": {
-            "list": "div.chapter-list",
+            "lasted-chap": "div.chapter-list",
             "thumbnail": "div.truyen_info_left img:first-child"
         },
         "http://truyentranh8.net": {
-            "list": "ul#ChapList > a",
+            "lasted-chap": "ul#ChapList > a",
             "thumbnail": "img.thumbnail"
         },
         "http://hocvientruyentranh.com": {
-            "list": "table.table-hover > tbody a",
+            "lasted-chap": "table.table-hover > tbody a",
             "thumbnail": "div.__info-container > div.__left > div.__image > img"
         },
         "http://truyentranhtuan.com": {
-            "list": "div#manga-chapter a",
+            "lasted-chap": "div#manga-chapter a",
             "thumbnail": "div.manga-cover > img"
         },
         "https://hentaivn.net": {
-            "list": "table.listing > tbody a",
+            "lasted-chap": "table.listing > tbody a",
             "thumbnail": "div.page-ava > img"
         },
         "http://mangafox.me": {
-            "list": "ul.chlist a",
+            "lasted-chap": "ul.chlist a",
             "thumbnail": "div.cover > img"
         },
         "http://www.novelupdates.com": {
-            "list": "div#myTable > tbody > tr:first-child > td:last-child > a:last-child",
+            "lasted-chap": "div#myTable > tbody > tr:first-child > td:last-child > a:last-child",
             "thumbnail": "div.seriesimg > img"
         },
         "http://valvrareteam.com": {
-            "list": "",
+            "lasted-chap": "",
             "thumbnail": ""
         }
     }
